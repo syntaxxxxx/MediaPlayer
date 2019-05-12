@@ -1,0 +1,416 @@
+p com.syntax.mediaplayer.db 0
+d 0/Converters
+a android.arch.persistence.room.TypeConverter 0
+m 0 0/Converters fromTimestamp
+a org.jetbrains.annotations.Nullable 1
+m 1 0/Converters fromTimestamp
+m 0 0/Converters toTimestamp
+m 1 0/Converters toTimestamp
+d 0/PodPlayDatabase
+a android.arch.persistence.room.Database 2
+c 2 0/PodPlayDatabase
+a android.arch.persistence.room.TypeConverters 3
+c 3 0/PodPlayDatabase
+a org.jetbrains.annotations.NotNull 4
+m 4 0/PodPlayDatabase podcastDao
+d 0/PodPlayDatabase$Companion
+m 4 0/PodPlayDatabase$Companion getInstance
+m 1 0/PodPlayDatabase access$getInstance$cp
+d 0/PodcastDao
+a android.arch.persistence.room.Dao 5
+c 5 0/PodcastDao
+a android.arch.persistence.room.Query 6
+m 6 0/PodcastDao loadPodcasts
+m 4 0/PodcastDao loadPodcasts
+m 6 0/PodcastDao loadPodcastsStatic
+m 4 0/PodcastDao loadPodcastsStatic
+m 6 0/PodcastDao loadEpisodes
+m 4 0/PodcastDao loadEpisodes
+m 6 0/PodcastDao loadPodcast
+m 1 0/PodcastDao loadPodcast
+a android.arch.persistence.room.Insert 7
+m 7 0/PodcastDao insertPodcast
+m 7 0/PodcastDao insertEpisode
+a android.arch.persistence.room.Delete 8
+m 8 0/PodcastDao deletePodcast
+d 0/PodcastDao$DefaultImpls
+p com.syntax.mediaplayer.util 1
+d 1/DateUtils
+m 4 1/DateUtils jsonDateToShortDate
+m 4 1/DateUtils dateToShortDate
+m 4 1/DateUtils xmlDateToDate
+d 1/HtmlUtils
+m 4 1/HtmlUtils htmlToSpannable
+p com.syntax.mediaplayer.service 2
+d 2/PodplayMediaCallback
+d 2/PodplayMediaCallback$PodplayMediaListener
+d 2/PodplayMediaCallback$PodplayMediaListener$DefaultImpls
+f 1 2/PodplayMediaCallback listener
+m 1 2/PodplayMediaCallback getListener
+d 2/PodplayMediaCallback$initializeMediaPlayer$1
+f 4 2/PodplayMediaCallback context
+m 4 2/PodplayMediaCallback getContext
+f 4 2/PodplayMediaCallback mediaSession
+m 4 2/PodplayMediaCallback getMediaSession
+f 1 2/PodplayMediaCallback mediaPlayer
+m 1 2/PodplayMediaCallback getMediaPlayer
+d 2/PodplayMediaCallback$Companion
+f 4 2/PodplayMediaCallback CMD_CHANGESPEED
+f 4 2/PodplayMediaCallback CMD_EXTRA_SPEED
+d 2/PodcastResponse
+d 2/PodcastResponse$ItunesPodcast
+f 4 2/PodcastResponse$ItunesPodcast collectionCensoredName
+m 4 2/PodcastResponse$ItunesPodcast getCollectionCensoredName
+f 4 2/PodcastResponse$ItunesPodcast feedUrl
+m 4 2/PodcastResponse$ItunesPodcast getFeedUrl
+f 4 2/PodcastResponse$ItunesPodcast artworkUrl100
+m 4 2/PodcastResponse$ItunesPodcast getArtworkUrl100
+f 4 2/PodcastResponse$ItunesPodcast releaseDate
+m 4 2/PodcastResponse$ItunesPodcast getReleaseDate
+m 4 2/PodcastResponse$ItunesPodcast component1
+m 4 2/PodcastResponse$ItunesPodcast component2
+m 4 2/PodcastResponse$ItunesPodcast component3
+m 4 2/PodcastResponse$ItunesPodcast component4
+m 4 2/PodcastResponse$ItunesPodcast copy
+m 4 2/PodcastResponse$ItunesPodcast copy$default
+f 4 2/PodcastResponse results
+m 4 2/PodcastResponse getResults
+m 4 2/PodcastResponse component2
+m 4 2/PodcastResponse copy
+m 4 2/PodcastResponse copy$default
+d 2/ItunesService
+a retrofit2.http.GET 9
+m 9 2/ItunesService searchPodcastByTerm
+m 4 2/ItunesService searchPodcastByTerm
+d 2/ItunesService$DefaultImpls
+d 2/ItunesService$Companion
+f 4 2/ItunesService$Companion instance$delegate
+m 4 2/ItunesService$Companion getInstance
+d 2/ItunesService$Companion$instance$2
+d 2/PodplayMediaService
+m 1 2/PodplayMediaService onGetRoot
+a android.support.annotation.RequiresApi 10
+m 10 2/PodplayMediaService createNotificationChannel
+d 2/PodplayMediaService$displayNotification$1
+d 2/PodplayMediaService$Companion
+m 4 2/PodplayMediaService access$createNotification
+d 2/RssFeedService
+d 2/RssFeedService$getFeed$1
+d 2/FeedService
+d 2/FeedService$DefaultImpls
+d 2/FeedService$Companion
+f 4 2/FeedService$Companion instance$delegate
+m 4 2/FeedService$Companion getInstance
+d 2/FeedService$Companion$instance$2
+m 4 2/FeedService$Companion$instance$2 invoke
+d 2/RssFeedResponse
+d 2/RssFeedResponse$EpisodeResponse
+f 1 2/RssFeedResponse$EpisodeResponse title
+m 1 2/RssFeedResponse$EpisodeResponse getTitle
+f 1 2/RssFeedResponse$EpisodeResponse link
+m 1 2/RssFeedResponse$EpisodeResponse getLink
+f 1 2/RssFeedResponse$EpisodeResponse description
+m 1 2/RssFeedResponse$EpisodeResponse getDescription
+f 1 2/RssFeedResponse$EpisodeResponse guid
+m 1 2/RssFeedResponse$EpisodeResponse getGuid
+f 1 2/RssFeedResponse$EpisodeResponse pubDate
+m 1 2/RssFeedResponse$EpisodeResponse getPubDate
+f 1 2/RssFeedResponse$EpisodeResponse duration
+m 1 2/RssFeedResponse$EpisodeResponse getDuration
+f 1 2/RssFeedResponse$EpisodeResponse url
+m 1 2/RssFeedResponse$EpisodeResponse getUrl
+f 1 2/RssFeedResponse$EpisodeResponse type
+m 1 2/RssFeedResponse$EpisodeResponse getType
+m 1 2/RssFeedResponse$EpisodeResponse component1
+m 1 2/RssFeedResponse$EpisodeResponse component2
+m 1 2/RssFeedResponse$EpisodeResponse component3
+m 1 2/RssFeedResponse$EpisodeResponse component4
+m 1 2/RssFeedResponse$EpisodeResponse component5
+m 1 2/RssFeedResponse$EpisodeResponse component6
+m 1 2/RssFeedResponse$EpisodeResponse component7
+m 1 2/RssFeedResponse$EpisodeResponse component8
+m 4 2/RssFeedResponse$EpisodeResponse copy
+m 4 2/RssFeedResponse$EpisodeResponse copy$default
+f 4 2/RssFeedResponse title
+m 4 2/RssFeedResponse getTitle
+f 4 2/RssFeedResponse description
+m 4 2/RssFeedResponse getDescription
+f 4 2/RssFeedResponse summary
+m 4 2/RssFeedResponse getSummary
+f 4 2/RssFeedResponse lastUpdated
+m 4 2/RssFeedResponse getLastUpdated
+f 1 2/RssFeedResponse episodes
+m 1 2/RssFeedResponse getEpisodes
+m 4 2/RssFeedResponse component1
+m 4 2/RssFeedResponse component2
+m 4 2/RssFeedResponse component3
+m 4 2/RssFeedResponse component4
+m 1 2/RssFeedResponse component5
+m 4 2/RssFeedResponse copy
+m 4 2/RssFeedResponse copy$default
+d 2/EpisodeUpdateService
+d 2/EpisodeUpdateService$onStartJob$1
+d 2/EpisodeUpdateService$onStartJob$1$1
+m 1 2/EpisodeUpdateService$onStartJob$1 doResume
+m 4 2/EpisodeUpdateService$onStartJob$1 create
+m 1 2/EpisodeUpdateService$onStartJob$1 invoke
+m 10 2/EpisodeUpdateService createNotificationChannel
+d 2/EpisodeUpdateService$Companion
+f 4 2/EpisodeUpdateService EPISODE_CHANNEL_ID
+m 4 2/EpisodeUpdateService$Companion getEPISODE_CHANNEL_ID
+m 4 2/EpisodeUpdateService access$getEPISODE_CHANNEL_ID$cp
+p com.syntax.mediaplayer.repository 3
+d 3/ItunesRepo
+d 3/ItunesRepo$searchByTerm$1
+d 3/PodcastRepo
+d 3/PodcastRepo$PodcastUpdateInfo
+f 4 3/PodcastRepo$PodcastUpdateInfo feedUrl
+m 4 3/PodcastRepo$PodcastUpdateInfo getFeedUrl
+f 4 3/PodcastRepo$PodcastUpdateInfo name
+m 4 3/PodcastRepo$PodcastUpdateInfo getName
+d 3/PodcastRepo$getPodcast$1
+d 3/PodcastRepo$getPodcast$1$1$1
+m 1 3/PodcastRepo$getPodcast$1$1$1 doResume
+m 4 3/PodcastRepo$getPodcast$1$1$1 create
+m 1 3/PodcastRepo$getPodcast$1$1$1 invoke
+d 3/PodcastRepo$getPodcast$1$doResume$$inlined$let$lambda$1
+m 1 3/PodcastRepo$getPodcast$1$doResume$$inlined$let$lambda$1 doResume
+m 4 3/PodcastRepo$getPodcast$1$doResume$$inlined$let$lambda$1 create
+m 1 3/PodcastRepo$getPodcast$1$doResume$$inlined$let$lambda$1 invoke
+d 3/PodcastRepo$getPodcast$1$2
+d 3/PodcastRepo$getPodcast$1$2$1
+m 1 3/PodcastRepo$getPodcast$1$2$1 doResume
+m 4 3/PodcastRepo$getPodcast$1$2$1 create
+m 1 3/PodcastRepo$getPodcast$1$2$1 invoke
+d 3/PodcastRepo$getPodcast$1$2$2
+m 1 3/PodcastRepo$getPodcast$1$2$2 doResume
+m 4 3/PodcastRepo$getPodcast$1$2$2 create
+m 1 3/PodcastRepo$getPodcast$1$2$2 invoke
+m 1 3/PodcastRepo$getPodcast$1 doResume
+m 4 3/PodcastRepo$getPodcast$1 create
+m 1 3/PodcastRepo$getPodcast$1 invoke
+m 4 3/PodcastRepo getAll
+d 3/PodcastRepo$updatePodcastEpisodes$1
+d 3/PodcastRepo$getNewEpisodes$1
+d 3/PodcastRepo$saveNewEpisodes$1
+m 1 3/PodcastRepo$saveNewEpisodes$1 doResume
+m 4 3/PodcastRepo$saveNewEpisodes$1 create
+m 1 3/PodcastRepo$saveNewEpisodes$1 invoke
+d 3/PodcastRepo$save$1
+m 1 3/PodcastRepo$save$1 doResume
+m 4 3/PodcastRepo$save$1 create
+m 1 3/PodcastRepo$save$1 invoke
+d 3/PodcastRepo$delete$1
+m 1 3/PodcastRepo$delete$1 doResume
+m 4 3/PodcastRepo$delete$1 create
+m 1 3/PodcastRepo$delete$1 invoke
+m 4 3/PodcastRepo access$getPodcastDao$p
+m 4 3/PodcastRepo access$getFeedService$p
+m 1 3/PodcastRepo access$rssResponseToPodcast
+p com.syntax.mediaplayer.model 4
+d 4/Episode
+a android.arch.persistence.room.Entity 11
+c 11 4/Episode
+a android.arch.persistence.room.PrimaryKey 12
+f 12 4/Episode guid
+f 4 4/Episode guid
+m 4 4/Episode getGuid
+f 1 4/Episode podcastId
+m 1 4/Episode getPodcastId
+f 4 4/Episode title
+m 4 4/Episode getTitle
+f 4 4/Episode description
+m 4 4/Episode getDescription
+f 4 4/Episode mediaUrl
+m 4 4/Episode getMediaUrl
+f 4 4/Episode mimeType
+m 4 4/Episode getMimeType
+f 4 4/Episode releaseDate
+m 4 4/Episode getReleaseDate
+f 4 4/Episode duration
+m 4 4/Episode getDuration
+m 4 4/Episode component1
+m 1 4/Episode component2
+m 4 4/Episode component3
+m 4 4/Episode component4
+m 4 4/Episode component5
+m 4 4/Episode component6
+m 4 4/Episode component7
+m 4 4/Episode component8
+m 4 4/Episode copy
+m 4 4/Episode copy$default
+d 4/Podcast
+c 11 4/Podcast
+f 12 4/Podcast id
+f 1 4/Podcast id
+m 1 4/Podcast getId
+f 4 4/Podcast feedUrl
+m 4 4/Podcast getFeedUrl
+f 4 4/Podcast feedTitle
+m 4 4/Podcast getFeedTitle
+f 4 4/Podcast feedDesc
+m 4 4/Podcast getFeedDesc
+f 4 4/Podcast imageUrl
+m 4 4/Podcast getImageUrl
+f 4 4/Podcast lastUpdated
+m 4 4/Podcast getLastUpdated
+a android.arch.persistence.room.Ignore 13
+f 13 4/Podcast episodes
+f 4 4/Podcast episodes
+m 4 4/Podcast getEpisodes
+m 1 4/Podcast component1
+m 4 4/Podcast component2
+m 4 4/Podcast component3
+m 4 4/Podcast component4
+m 4 4/Podcast component5
+m 4 4/Podcast component6
+m 4 4/Podcast component7
+m 4 4/Podcast copy
+m 4 4/Podcast copy$default
+p com.syntax.mediaplayer.adapter 5
+d 5/PodcastListAdapter
+d 5/PodcastListAdapter$PodcastListAdapterListener
+d 5/PodcastListAdapter$PodcastListAdapterListener$DefaultImpls
+d 5/PodcastListAdapter$ViewHolder
+f 1 5/PodcastListAdapter$ViewHolder podcastSummaryViewData
+m 1 5/PodcastListAdapter$ViewHolder getPodcastSummaryViewData
+f 4 5/PodcastListAdapter$ViewHolder nameTextView
+m 4 5/PodcastListAdapter$ViewHolder getNameTextView
+f 4 5/PodcastListAdapter$ViewHolder lastUpdatedTextView
+m 4 5/PodcastListAdapter$ViewHolder getLastUpdatedTextView
+f 4 5/PodcastListAdapter$ViewHolder podcastImageView
+m 4 5/PodcastListAdapter$ViewHolder getPodcastImageView
+d 5/PodcastListAdapter$ViewHolder$1
+m 4 5/PodcastListAdapter$ViewHolder access$getPodcastListAdapterListener$p
+m 4 5/PodcastListAdapter onCreateViewHolder
+d 5/EpisodeListAdapter
+d 5/EpisodeListAdapter$EpisodeListAdapterListener
+d 5/EpisodeListAdapter$EpisodeListAdapterListener$DefaultImpls
+d 5/EpisodeListAdapter$ViewHolder
+f 1 5/EpisodeListAdapter$ViewHolder episodeViewData
+m 1 5/EpisodeListAdapter$ViewHolder getEpisodeViewData
+f 4 5/EpisodeListAdapter$ViewHolder titleTextView
+m 4 5/EpisodeListAdapter$ViewHolder getTitleTextView
+f 4 5/EpisodeListAdapter$ViewHolder descTextView
+m 4 5/EpisodeListAdapter$ViewHolder getDescTextView
+f 4 5/EpisodeListAdapter$ViewHolder durationTextView
+m 4 5/EpisodeListAdapter$ViewHolder getDurationTextView
+f 4 5/EpisodeListAdapter$ViewHolder releaseDateTextView
+m 4 5/EpisodeListAdapter$ViewHolder getReleaseDateTextView
+d 5/EpisodeListAdapter$ViewHolder$1
+m 4 5/EpisodeListAdapter$ViewHolder access$getEpisodeListAdapterListener$p
+m 4 5/EpisodeListAdapter onCreateViewHolder
+p com.syntax.mediaplayer.viewmodel 6
+d 6/SearchViewModel
+d 6/SearchViewModel$PodcastSummaryViewData
+f 1 6/SearchViewModel$PodcastSummaryViewData name
+m 1 6/SearchViewModel$PodcastSummaryViewData getName
+f 1 6/SearchViewModel$PodcastSummaryViewData lastUpdated
+m 1 6/SearchViewModel$PodcastSummaryViewData getLastUpdated
+f 1 6/SearchViewModel$PodcastSummaryViewData imageUrl
+m 1 6/SearchViewModel$PodcastSummaryViewData getImageUrl
+f 1 6/SearchViewModel$PodcastSummaryViewData feedUrl
+m 1 6/SearchViewModel$PodcastSummaryViewData getFeedUrl
+m 1 6/SearchViewModel$PodcastSummaryViewData component1
+m 1 6/SearchViewModel$PodcastSummaryViewData component2
+m 1 6/SearchViewModel$PodcastSummaryViewData component3
+m 1 6/SearchViewModel$PodcastSummaryViewData component4
+m 4 6/SearchViewModel$PodcastSummaryViewData copy
+m 4 6/SearchViewModel$PodcastSummaryViewData copy$default
+f 1 6/SearchViewModel iTunesRepo
+m 1 6/SearchViewModel getITunesRepo
+d 6/SearchViewModel$searchPodcasts$1
+m 4 6/SearchViewModel access$itunesPodcastToPodcastSummaryView
+d 6/PodcastViewModel
+d 6/PodcastViewModel$PodcastViewData
+f 1 6/PodcastViewModel$PodcastViewData feedTitle
+m 1 6/PodcastViewModel$PodcastViewData getFeedTitle
+f 1 6/PodcastViewModel$PodcastViewData feedUrl
+m 1 6/PodcastViewModel$PodcastViewData getFeedUrl
+f 1 6/PodcastViewModel$PodcastViewData feedDesc
+m 1 6/PodcastViewModel$PodcastViewData getFeedDesc
+f 1 6/PodcastViewModel$PodcastViewData imageUrl
+m 1 6/PodcastViewModel$PodcastViewData getImageUrl
+f 4 6/PodcastViewModel$PodcastViewData episodes
+m 4 6/PodcastViewModel$PodcastViewData getEpisodes
+m 1 6/PodcastViewModel$PodcastViewData component2
+m 1 6/PodcastViewModel$PodcastViewData component3
+m 1 6/PodcastViewModel$PodcastViewData component4
+m 1 6/PodcastViewModel$PodcastViewData component5
+m 4 6/PodcastViewModel$PodcastViewData component6
+m 4 6/PodcastViewModel$PodcastViewData copy
+m 4 6/PodcastViewModel$PodcastViewData copy$default
+d 6/PodcastViewModel$EpisodeViewData
+f 1 6/PodcastViewModel$EpisodeViewData guid
+m 1 6/PodcastViewModel$EpisodeViewData getGuid
+f 1 6/PodcastViewModel$EpisodeViewData title
+m 1 6/PodcastViewModel$EpisodeViewData getTitle
+f 1 6/PodcastViewModel$EpisodeViewData description
+m 1 6/PodcastViewModel$EpisodeViewData getDescription
+f 1 6/PodcastViewModel$EpisodeViewData mediaUrl
+m 1 6/PodcastViewModel$EpisodeViewData getMediaUrl
+f 1 6/PodcastViewModel$EpisodeViewData releaseDate
+m 1 6/PodcastViewModel$EpisodeViewData getReleaseDate
+f 1 6/PodcastViewModel$EpisodeViewData duration
+m 1 6/PodcastViewModel$EpisodeViewData getDuration
+m 1 6/PodcastViewModel$EpisodeViewData component1
+m 1 6/PodcastViewModel$EpisodeViewData component2
+m 1 6/PodcastViewModel$EpisodeViewData component3
+m 1 6/PodcastViewModel$EpisodeViewData component4
+m 1 6/PodcastViewModel$EpisodeViewData component5
+m 1 6/PodcastViewModel$EpisodeViewData component6
+m 4 6/PodcastViewModel$EpisodeViewData copy
+m 4 6/PodcastViewModel$EpisodeViewData copy$default
+f 1 6/PodcastViewModel podcastRepo
+m 1 6/PodcastViewModel getPodcastRepo
+f 1 6/PodcastViewModel activePodcastViewData
+m 1 6/PodcastViewModel getActivePodcastViewData
+f 1 6/PodcastViewModel activeEpisodeViewData
+m 1 6/PodcastViewModel getActiveEpisodeViewData
+d 6/PodcastViewModel$setActivePodcast$1
+d 6/PodcastViewModel$getPodcast$1
+m 1 6/PodcastViewModel getPodcasts
+d 6/PodcastViewModel$getPodcasts$1
+m 4 6/PodcastViewModel$getPodcasts$1 apply
+m 4 6/PodcastViewModel access$podcastToPodcastView
+m 1 6/PodcastViewModel access$getActivePodcast$p
+m 4 6/PodcastViewModel access$podcastToSummaryView
+p com.syntax.mediaplayer.ui 7
+d 7/PodcastActivity
+d 7/PodcastActivity$onCreateOptionsMenu$1
+d 7/PodcastActivity$onShowDetails$1
+d 7/PodcastActivity$performSearch$1
+d 7/PodcastActivity$handleIntent$1
+d 7/PodcastActivity$setupPodcastListView$1
+d 7/PodcastActivity$addBackStackListener$1
+d 7/PodcastActivity$Companion
+m 4 7/PodcastActivity$Companion access$getTAG_EPISODE_UPDATE_JOB$p
+m 4 7/PodcastActivity$Companion access$getTAG_DETAILS_FRAGMENT$p
+m 4 7/PodcastActivity access$getPodcastListAdapter$p
+m 4 7/PodcastActivity access$getTAG_DETAILS_FRAGMENT$cp
+m 4 7/PodcastActivity access$getTAG_EPISODE_UPDATE_JOB$cp
+d 7/PodcastDetailsFragment
+d 7/PodcastDetailsFragment$OnPodcastDetailsListener
+d 7/PodcastDetailsFragment$OnPodcastDetailsListener$DefaultImpls
+m 1 7/PodcastDetailsFragment onCreateView
+d 7/PodcastDetailsFragment$Companion
+m 4 7/PodcastDetailsFragment$Companion newInstance
+d 7/EpisodePlayerFragment
+d 7/EpisodePlayerFragment$MediaBrowserCallBacks
+d 7/EpisodePlayerFragment$MediaControllerCallback
+m 1 7/EpisodePlayerFragment onCreateView
+d 7/EpisodePlayerFragment$setupControls$1
+d 7/EpisodePlayerFragment$setupControls$2
+d 7/EpisodePlayerFragment$setupControls$3
+d 7/EpisodePlayerFragment$setupControls$4
+d 7/EpisodePlayerFragment$setupControls$5
+d 7/EpisodePlayerFragment$initVideoPlayer$1
+d 7/EpisodePlayerFragment$initMediaPlayer$1$1
+d 7/EpisodePlayerFragment$initMediaPlayer$$inlined$let$lambda$1
+d 7/EpisodePlayerFragment$animateScrubber$1$1
+d 7/EpisodePlayerFragment$animateScrubber$$inlined$let$lambda$1
+d 7/EpisodePlayerFragment$Companion
+m 4 7/EpisodePlayerFragment$Companion newInstance
+m 4 7/EpisodePlayerFragment access$getMediaBrowser$p
+m 1 7/EpisodePlayerFragment access$getMediaPlayer$p
+m 1 7/EpisodePlayerFragment access$getMediaSession$p

@@ -1,0 +1,4 @@
+#Sun May 12 18:53:57 WIB 2019
+base.0=/Users/mac/Desktop/MVVM2/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
